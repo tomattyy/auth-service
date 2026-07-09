@@ -5,17 +5,14 @@
   "description": "Authentication MicroService",
   "main": "index.js",
   "type": "commonjs",
-  "scripts": {
-    "start": "node scr/server.js",
-    "dev": "nodemon src/server.js",
-    "build": "js",
-    "lint": "jest",
-    "test": "eslint"
-  },
-  "keywords": ["node", "express", "auth", "microservice"],
 
-  "author": "Oska Mattheus",
-  "license": "ISC",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "build": "node -e \"console.log('Build concluído')\"",
+    "lint": "oxlint .",
+    "preview": "node index.js",
+    "test": "jest --coverage"
+  },
 
   "dependencies": {
     "cors": "^2.8.6",
@@ -23,9 +20,8 @@
   },
 
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.6.0",
-    "globals": "^17.7.0",
-    "jest": "^30.4.2"
+    "jest":"30.4.2",
+    "oxlint": "^1.71.0",
+    "supertest": "^7.2.2"
   }
 }
