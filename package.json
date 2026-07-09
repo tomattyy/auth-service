@@ -2,25 +2,30 @@
   "name": "auth-service",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Authentication MicroService",
   "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview",
-    "test": "vitest run"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
+  "scripts": {
+    "start": "node scr/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "js",
+    "lint": "jest",
+    "test": "eslint"
+  },
+  "keywords": ["node", "express", "auth", "microservice"],
+
+  "author": "Oska Mattheus",
+  "license": "ISC",
+
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1"
   },
+
   "devDependencies": {
-    "jest": "^30.4.2",
-    "supertest": "^7.2.2"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
+    "jest": "^30.4.2"
   }
 }
